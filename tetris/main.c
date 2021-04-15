@@ -3,19 +3,14 @@
 #include "game.h"
 
 int main() {
-	int x = 0;
+	int y = 0;
 	int random = 0;
 
+	printBackground();
+
 	while (1) {
-		if (x == 0) {
-			random = rand() % 7;
-		}
-		
-		printTetromino(4, 1 + x++, random);
-		
-		if (x == 18) {
-			x = 0;
-		}
-		Sleep(50);
+		printTetromino(8, 1 + y++, 6);
+
+		Sleep(1000);
 	}
 }
