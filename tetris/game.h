@@ -10,6 +10,7 @@ extern int tetromino[7][4][4];
 
 void printBackground();
 void printTetromino(int x, int y, int tetrominoIndex);
+void clearTetromino(int x, int y, int tetrominoIndex);
 void setColor(int color);
 void setCursor(int x, int y);
 void resetCMD();

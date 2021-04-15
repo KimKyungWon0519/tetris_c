@@ -88,10 +88,24 @@ void printBackground() {
 void printTetromino(int x, int y, int tetrominoIndex) {
 	for (int i = 0; i < 4; i++) {
 		for (int j = 0; j < 4; j++) {
-			setCursor(x + j * 2, i + y);
 			if (tetromino[tetrominoIndex][i][j]) {
 				setColor(tetromino[tetrominoIndex][i][j]);
+				setCursor(x + j * 2, i + y);
 				printf("бс");
+			}
+		}
+	}
+
+	resetCMD();
+}
+
+void clearTetromino(int x, int y, int tetrominoIndex) {
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 4; j++) {
+			if (tetromino[tetrominoIndex][i][j]) {
+				setColor(tetromino[tetrominoIndex][i][j]);
+				setCursor(x + j * 2, i + y);
+				printf("  ");
 			}
 		}
 	}
