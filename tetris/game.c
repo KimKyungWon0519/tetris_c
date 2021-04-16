@@ -130,3 +130,15 @@ void setCursor(int x, int y) {
 
 	SetConsoleCursorPosition(COUT, cur);
 }
+
+int isBlock(int x, int y, int tetrominoIndex) {
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 4; j++) {
+			if (background[i + y][j + x] && tetromino[tetrominoIndex][i][j]) {
+				return 1;
+			}
+		}
+	}
+
+	return 0;
+}

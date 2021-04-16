@@ -14,3 +14,4 @@ void clearTetromino(int x, int y, int tetrominoIndex);
 void setColor(int color);
 void setCursor(int x, int y);
 void resetCMD();
+int isBlock(int x, int y, int tetrominoIndex);

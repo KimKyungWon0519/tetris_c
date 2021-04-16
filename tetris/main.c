@@ -10,11 +10,13 @@ int main() {
 
 	while (1) {
 		if (y == 1) {
-			random = rand() % 9;
+			random = rand() % 8;
 		} 
 
-		clearTetromino(8, 1 + y - 1, random);
-		printTetromino(8, 1 + y, random);
+		if (!isBlock(8, 1 + y, random)) {
+			clearTetromino(8, 1 + y - 1, random);
+			printTetromino(8, 1 + y, random);
+		}
 
 		y++;
 
@@ -22,6 +24,6 @@ int main() {
 			y = 1;
 		}
 
-		Sleep(50);
+		Sleep(100);
 	}
 }
